@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <style>
+        body{
+            background-color: mediumorchid;
+        }
+        .add{
+            width: 50px    ;
+            background-color: green;
+        }
+        .sub{
+            width: 50px;
+            background-color: blue;
+            
+
+        }
+        .mul{
+            width: 50px;
+            background-color: orange;
+
+        }
+        .div{
+            width: 50px;
+            background-color: red;
+
+        }
+    </style>
+
+    <body>
+        <h1>Small Calculater</h1>
+       <div>
+        <div>
+            <label> Enter A value:</label>
+            <input id="inputA" type="text">
+
+        </div>
+        <br>
+        <div>
+            <label >Enter B value :</label>
+            <input id="inputB" type="text">
+
+        </div>
+        <br>
+        
+        <div>
+            <button class="add" onclick="addition()">+</button>
+       </div><br>
+       <div >
+        <button class="sub" onclick="subraction()">-</button>
+       </div><br>
+       <div >
+        <button class="mul" onclick="multiple()">*</button>
+       </div><br>
+       
+       
+       <div>
+        <button  class="div" onclick="division()">/
+
+        </button><br>
+       </div><br>
+       <div id="result"><label> your ❤ :</label> </div>
+       <script>
+        var A = 0;
+        var B = 0;
+         var result = 0;
+         function addition(){
+            A = parseInt(document.getElementById('inputA').value);
+            B = parseInt(document.getElementById('inputB').value);
+
+            result = A+B;
+            document.getElementById('result').innerHTML = " "+result;
+                }
+                function multiple(){
+                A = parseInt(document.getElementById('inputA').value);
+                 B = parseInt(document.getElementById('inputB').value);
+
+                    result = A*B;
+            document.getElementById('result').innerHTML = "  "+result;
+
+                }
+                function subraction(){
+                A = parseInt(document.getElementById('inputA').value);
+                 B = parseInt(document.getElementById('inputB').value);
+
+                    result = A-B;
+            document.getElementById('result').innerHTML = "  "+result;
+
+                }
+                function division(){
+                    A = parseInt(document.getElementById('inputA').value);
+                    B = parseInt(document.getElementById('inputB').value);
+
+                    result = A/B;
+                    document.getElementById('result' ).innerHTML = ""+result;
+                          
+                }
+       </script>
+        
+</body>
+</html>
